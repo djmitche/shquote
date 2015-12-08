@@ -1,5 +1,5 @@
-// The shquote package helps with quoting strings that will be interpretd by a
-// UNIX shell.
+// Package shquote helps with quoting strings that will be interpretd by a UNIX
+// shell.
 package shquote
 
 import (
@@ -27,7 +27,7 @@ func Quote(str string) string {
 
 // QuoteList quotes each element in the list and joins them with whitespace.
 func QuoteList(unquoted []string) string {
-	var quoted []string = make([]string, len(unquoted))
+	var quoted = make([]string, len(unquoted))
 	for i, u := range unquoted {
 		quoted[i] = Quote(u)
 	}
